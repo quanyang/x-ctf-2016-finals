@@ -25,16 +25,6 @@
   </nav>
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center light-blue-text">The Continental</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">We only accept gold coins.</h5>
-      </div>
-      <div class="row center">
-        <a href="login.php" id="download-button" class="btn-large waves-effect waves-light light-blue">Login</a>
-      </div>
-      <br><br>
-
     </div>
   </div>
 
@@ -47,14 +37,14 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">report_problem</i></h2>
-            <h5 class="center">No business in the hotel.</h5>
+            <h5 class="center">No business in the hotel</h5>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center light-blue-text"><i class="material-icons">local_hospital</i></h2>
-            <h5 class="center">24/7 Doctor</h5>
+            <h5 class="center">24/7 Doctor on-site</h5>
           </div>
         </div>
 
