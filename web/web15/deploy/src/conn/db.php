@@ -3,7 +3,7 @@ class dbConn {
   private $conn;
   public function __construct() {
     $dbhost = 'localhost';
-    $dbuser = 'root';
+    $dbuser = 'continental';
     $dbpass = 'XCTFP@SSW0RDV3RYL0NGANDG00D';
     $dbname = 'continental';
     $this->conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die("Wrong info given");
