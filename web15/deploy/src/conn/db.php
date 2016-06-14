@@ -26,6 +26,26 @@ class dbConn {
     }
   }
 
+  public function getAllUsernameLike($username) {
+    $return = array();
+    $sql = "SELECT username FROM users WHERE username like '%".$username."%';";
+    if ($this->conn->multi_query($sql)) {
+      $result = $this->conn->store_result();
+      while ($row = $result->fetch_array()) {
+        array_push($return, $row);   
+      }
+      $this->conn->close();
+      if ( empty($return) ) {
+        return null;
+      } else {
+        return $return;
+      }
+    } else {
+      $this->conn->close();
+      return false;
+    }
+  }
+
   public function checkLogin($username, $password) {
     $username = $this->conn->real_escape_string($username);
     $password = $this->conn->real_escape_string($password);
@@ -34,7 +54,7 @@ class dbConn {
       $result = $this->conn->store_result();
       $row = $result->fetch_array();
       $this->conn->close();
-      return sizeof($row)>0;
+      return $row;
     } else {
       $this->conn->close();
       return false;
@@ -44,7 +64,7 @@ class dbConn {
   public function createNewUser($username, $password) {
     $username = $this->conn->real_escape_string($username);
     $password = $this->conn->real_escape_string($password);
-    $sql = "INSERT INTO users VALUES (null, '".$username."', MD5('".$password."'));";
+    $sql = "INSERT INTO users VALUES (null, '".$username."', MD5('".$password."'), '', 0);";
     if ($this->conn->multi_query($sql)) {
       $id = mysqli_insert_id($this->conn);
       $this->conn->close();

@@ -20,6 +20,11 @@ if(!session_id()) {
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
+        <?php
+        if ($_SESSION['name'] == 'johnwick') {
+            echo '<li><a href="search.php">Search</a></li>'; 
+        }
+        ?>
         <li><a href="index.php">Home</a></li>
         <?php 
         if ($_SESSION['name']) {
@@ -31,9 +36,14 @@ if(!session_id()) {
     </ul>
 
     <ul id="nav-mobile" class="side-nav">
+        <?php
+        if ($_SESSION['name'] == 'johnwick') {
+            echo '<li><a href="search.php">Search</a></li>'; 
+        }
+        ?>
         <li><a href="index.php">Home</a></li>
         <?php 
-        if ($_SESSION['name']) {
+        if (isset($_SESSION['name'])) {
             echo '<li><a href="login.php?logout">'.$_SESSION['name'].'</a></li>';
         } else {
             echo '<li><a href="login.php">Login</a></li>';
