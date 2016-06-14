@@ -1,6 +1,7 @@
 From linode/lamp:latest
 RUN apt-get update
 RUN apt-get -y upgrade
+RUN apt-get install php5-mysql
 
 RUN rm -rfd /var/www/example.com
 RUN rm /etc/apache2/sites-enabled/example.com.conf

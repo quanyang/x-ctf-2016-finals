@@ -1,3 +1,9 @@
+<?php
+if(!session_id()) {
+  session_start();
+  date_default_timezone_set('Asia/Singapore');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,57 +20,71 @@
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="login.php">Login</a></li>
-      </ul>
+        <li><a href="index.php">Home</a></li>
+        <?php 
+        if ($_SESSION['name']) {
+            echo '<li><a href="login.php?logout">'.$_SESSION['name'].'</a></li>';
+        } else {
+            echo '<li><a href="login.php">Login</a></li>';
+        }
+        ?>
+    </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Login</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
+    <ul id="nav-mobile" class="side-nav">
+        <li><a href="index.php">Home</a></li>
+        <?php 
+        if ($_SESSION['name']) {
+            echo '<li><a href="login.php?logout">'.$_SESSION['name'].'</a></li>';
+        } else {
+            echo '<li><a href="login.php">Login</a></li>';
+        }
+        ?>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+</div>
+</nav>
+<div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br><br>
-      <h1 class="header center light-blue-text">The Continental</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">We only accept gold coins.</h5>
-      </div>
-      <div class="row center">
-        <a href="login.php" id="download-button" class="btn-large waves-effect waves-light light-blue">Login</a>
-      </div>
-      <br><br>
+        <br><br>
+        <h1 class="header center light-blue-text">The Continental</h1>
+        <div class="row center">
+            <h5 class="header col s12 light">We only accept gold coins.</h5>
+        </div>
+        <div class="row center">
+            <a href="login.php" id="download-button" class="btn-large waves-effect waves-light brown">Login</a>
+        </div>
+        <br><br>
 
     </div>
-  </div>
+</div>
 
 
-  <div class="container">
+<div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">report_problem</i></h2>
-            <h5 class="center">No business in the hotel.</h5>
-          </div>
-        </div>
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">report_problem</i></h2>
+                    <h5 class="center">No business in the hotel.</h5>
+                </div>
+            </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">local_hospital</i></h2>
-            <h5 class="center">24/7 Doctor</h5>
-          </div>
-        </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">local_hospital</i></h2>
+                    <h5 class="center">24/7 Doctor</h5>
+                </div>
+            </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">hotel</i></h2>
-            <h5 class="center">Discrete</h5>
-          </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center brown-text"><i class="material-icons">hotel</i></h2>
+                    <h5 class="center">Discrete</h5>
+                </div>
+            </div>
         </div>
-      </div>
 
     </div>
     <br><br>
@@ -72,31 +92,31 @@
     <div class="section">
 
     </div>
-  </div>
+</div>
 
-  <footer class="page-footer light-blue">
+<footer class="page-footer light-blue">
     <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">The Continental</h5>
-          <p class="grey-text text-lighten-4">Hotel for assassins</p>
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">The Continental</h5>
+                <p class="grey-text text-lighten-4">Hotel for assassins</p>
 
 
+            </div>
         </div>
-      </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
+        <div class="container">
+            Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+        </div>
     </div>
-  </footer>
+</footer>
 
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
-  </body>
+</body>
 </html>
