@@ -10,7 +10,7 @@ GRANT ALL ON continental.* TO 'continental'@'localhost';
 CREATE DATABASE continental;
 USE continental;
 CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, username varchar(30) NOT NULL, password varchar(64) NOT NULL, address varchar(256), isAdmin INT DEFAULT 0, PRIMARY KEY (id));
-INSERT INTO users VALUES (null, 'johnwick', md5('akszxmciu41534567uasnd217^%$#@$%'), 'X-CTF{INSERTFLAG}', 1);
+INSERT INTO users VALUES (null, 'johnwick', md5('akszxmciu41534567uasnd217^%$#@$%'), 'XCTF{S0_W!CK3D_TRUNC@T3D}', 1);
 INSERT INTO users VALUES (null, 'harry', md5('akszxmciu41534567uasnd217^%$#@$%'), '', 1);
 INSERT INTO users VALUES (null, 'viggotarasov', md5('akszxmciu41534567uasnd217^%$#@$%'), '', 1);
 INSERT INTO users VALUES (null, 'msperkins', md5('akszxmciu41534567uasnd217^%$#@$%'), '', 1);
