@@ -1,0 +1,8 @@
+Connect to WiFi access point credentials Amon's Badge:amonsbadge
+Perform a host discovery scan to find the badge on 192.168.4.1
+Perform a port scan to discover port 1337 open
+Connect to the port to download the message
+Decode the base64 message to reveal MIDI file
+Listen to MIDI file and recon for Gravity Falls
+Approach Gamemaster to take a look at the badge
+Decrypt the badge with Bill's Cipher
