@@ -2,7 +2,7 @@
  "score": 20,
  "category": "Web",
  "grader": "web/web20/grader.py",
- "description": "Flag is on the server.",
+ "description": "Flag is on the server. Get the source code of index.php to find the flag.",
  "threshold": 0,
  "weightmap": {},
  "hint": ""}
