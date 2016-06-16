@@ -12,7 +12,11 @@ RUN echo "NameVirtualHost *:80\r\n<VirtualHost *:80>\r\nServerName potat\r\nDocu
 
 ADD ./src /var/www/html
 COPY start.sh start.sh
+RUN mv /var/www/html/flag_is_here.lol /flag_is_here.lol
+RUN chmod 444 /flag_is_here.lol
+RUN chown www-data:www-data -R /var/www/html
 RUN chmod +x start.sh
+RUN chmod +w /var/www/html/hitimages
 
 ENTRYPOINT ["./start.sh"]
 

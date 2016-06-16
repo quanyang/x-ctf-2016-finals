@@ -1,5 +1,9 @@
 <?php
 include_once('./conn/db.php');
+/*
+ * flag is in /var/www/html/flag_is_here.lol 
+ */
+stream_wrapper_unregister("file", "ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg", "expect");
 function getRedirectUrl ($url) {
   stream_context_set_default(array(
                              'http' => array(
@@ -29,7 +33,16 @@ if (isset($_GET['upload']) && isset($_POST['url'])) {
   $url = $_POST['url'];
   if (!filter_var($url, FILTER_VALIDATE_URL) === false && preg_match("/^https?:\/\/.*\.jpg$/", $url)) {
     $url = getRedirectUrl($url);
-    echo file_get_contents($url);
+    $contents = file_get_contents($url);
+    $size = strlen($contents);
+    $name = md5($_POST['username']);
+    $url = "./hitimages/" . $name . "_" . $_POST['username'] . ".jpg";
+    $imageFile = fopen($url,"wb");
+    if ($imageFile) {
+      fwrite($imageFile, $contents);
+      $file = $url;
+      fclose($imageFile);
+    }
   }
 }
 
@@ -112,6 +125,15 @@ if (isset($_GET['upload']) && isset($_POST['url'])) {
                         </button>
                       </div>
                     </center>
+                  </div>
+                  <div class="row center-align">
+                    <p class="center">
+                      <?php
+                      if (isset($file)) {
+                        echo "<img src=$file width='500px' height='500px'>";
+                      }
+                      ?>
+                    </p>
                   </div>
                 </p>  
               </form>
