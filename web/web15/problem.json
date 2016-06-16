@@ -1,0 +1,8 @@
+{"name": "JohnWick",
+ "score": 15,
+ "category": "Web",
+ "grader": "web/web15/grader.py",
+ "description": "Login as 'johnwick' and find the flag. ",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}

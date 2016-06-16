@@ -1,2 +1,2 @@
 #!/bin/sh
-docker run -p 80:80 -t -i xctf-web 
+docker run -p 8880:80 -t -i xctf-web 

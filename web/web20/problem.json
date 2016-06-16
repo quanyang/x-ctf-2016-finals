@@ -1,0 +1,8 @@
+{"name": "JohnSick",
+ "score": 20,
+ "category": "Web",
+ "grader": "web/web20/grader.py",
+ "description": "Flag is on the server.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}
