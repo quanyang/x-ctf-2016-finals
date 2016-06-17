@@ -1,0 +1,8 @@
+{"name": "JohnSlick",
+ "score": 25,
+ "category": "Web",
+ "grader": "web/web25/grader.py",
+ "description": "Flag is on the server. Get a reverse shell. :) Be nice, don't break the server.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}

@@ -1,29 +1,10 @@
 <?php
 include_once('./conn/db.php');
-/*
- * flag is in /flag_is_here.lol 
- */
-$scheme = ["ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg","https","http","ftps","compress.zlib","compress.bzip2","zip"];
+$scheme = ["ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg", "php","https","http","ftps","compress.zlib","compress.bzip2","zip"];
 foreach ($scheme as $i) {
   stream_wrapper_unregister($i);
 }
-function getRedirectUrl ($url) {
-  stream_context_set_default(array(
-                             'http' => array(
-                                             'method' => 'HEAD'
-                                             )
-                             ));
-  $headers = get_headers($url, 1);
-  stream_context_set_default(array(
-                             'http' => array(
-                                             'method' => 'GET'
-                                             )
-                             ));
-  if ($headers !== false && isset($headers['Location'])) {
-    return $headers['Location'];
-  }
-  return $url;
-}
+
 if(!session_id()) {
   session_start();
   date_default_timezone_set('Asia/Singapore');
@@ -32,11 +13,13 @@ if (!isset($_SESSION['name'])) {
   header("Location: index.php");
   die();
 }
-if (isset($_GET['upload']) && isset($_POST['url'])) {
-  $url = $_POST['url'];
-  if (!filter_var($url, FILTER_VALIDATE_URL) === false && preg_match("/^https?:\/\/.*\.jpg$/", $url)) {
-    $url = getRedirectUrl($url);
-    $contents = file_get_contents($url);
+if (isset($_GET['upload']) && isset($_FILES['image'])) {
+
+  $allowed =  array('gif', 'png' ,'jpg');
+  $filename = $_FILES['image']['name'];
+  $ext = pathinfo($filename, PATHINFO_EXTENSION);
+  if(in_array($ext,$allowed) ) {
+    $contents = file_get_contents($_FILES["image"]["tmp_name"]);
     $name = md5($_POST['username']);
     $url = "./hitimages/" . $name . "_" . $_POST['username'] . ".jpg";
     $imageFile = fopen($url,"wb");
@@ -45,7 +28,19 @@ if (isset($_GET['upload']) && isset($_POST['url'])) {
       $file = $url;
       fclose($imageFile);
     }
+  } else if ($ext === 'svg') {
+    $svg = file_get_contents($_FILES["image"]["tmp_name"]);
+    $svg = new SimpleXMLElement( $svg );
+    $svg->registerXPathNamespace('svg', 'http://www.w3.org/2000/svg');
+    $svg->registerXPathNamespace('xlink', 'http://www.w3.org/1999/xlink');
+    $result = $svg->xpath('//svg:image/@xlink:href');
+
+    $msg = "";
+    for ($i = 0; $i < count($result); $i++){
+      $msg .= file_get_contents($result[$i]['href']);
+    }
   }
+
 }
 
 ?>
@@ -109,20 +104,18 @@ if (isset($_GET['upload']) && isset($_POST['url'])) {
           <div class="col s10 m10">
             <div class="icon-block">
               <h5 class="center">Upload your hit image:</h5>
-              <form id="register" method="post" action="?upload">
+              <form id="register" method="post" enctype="multipart/form-data" action="?upload">
                 <p class="heavy">
-                  <div class="row center-align">
-                    <p class="center">
-                      .jpg files only.
-                    </p>
+                  <div class="row">
+                    <center>
+                      <div class="input-field col">
+                        <input id="image" name="image" type="file" class="validate" required>
+                      </div>
+                    </center>
                   </div>
                   <div class="row">
                     <center>
-                      <div class="input-field col s9">
-                        <input id="url" name="url" type="text" class="validate" required>
-                        <label for="url">URL</label>
-                      </div>
-                      <div class="col s1">
+                      <div class="col">
                         <button style="margin-top:30px;" class="btn waves-effect waves-light brown" type="submit" name="action">Upload <i class="material-icons right">send</i>
                         </button>
                       </div>
@@ -133,6 +126,10 @@ if (isset($_GET['upload']) && isset($_POST['url'])) {
                       <?php
                       if (isset($file)) {
                         echo "<img src=$file width='500px' height='500px'>";
+                      }
+                      else if (isset($msg)) {
+                        echo "Secret mode activated:<br/>";
+                        echo "<p><code><pre>$msg</pre></code></p>";
                       }
                       ?>
                     </p>
