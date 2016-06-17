@@ -4,7 +4,7 @@ class dbConn {
   public function __construct() {
     $dbhost = 'localhost';
     $dbuser = 'continental';
-    $dbpass = 'XCTFP@SSW0RDV3RYL0NGANDG00D';
+    $dbpass = 'XCTFP@SSW0RDV3RYL0NGANDG00DSOLONGSOGOOD';
     $dbname = 'continental';
     $this->conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die("Wrong info given");
     if (mysqli_connect_errno()) {

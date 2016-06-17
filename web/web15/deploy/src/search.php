@@ -11,6 +11,7 @@ if (!isset($_SESSION['name'])) {
 if (isset($_GET['search']) && isset($_POST['username'])) {
     $connObj = new dbconn();
     $users = $connObj->getAllUsernameLike($_POST['username']);
+    sleep(2);
 }
 
 ?>

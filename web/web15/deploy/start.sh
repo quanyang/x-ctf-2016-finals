@@ -6,7 +6,7 @@ mysql -uroot -pAdmin2015 -e """
 drop database exampleDB;
 SET PASSWORD = PASSWORD('XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG'); 
 CREATE USER 'continental'@'localhost' IDENTIFIED BY 'XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG';
-GRANT ALL ON continental.* TO 'continental'@'localhost';
+GRANT SELECT, INSERT, CREATE ON continental.* TO 'continental'@'localhost';
 CREATE DATABASE continental;
 USE continental;
 CREATE TABLE users (id INT NOT NULL AUTO_INCREMENT, username varchar(30) NOT NULL, password varchar(64) NOT NULL, address varchar(256), isAdmin INT DEFAULT 0, PRIMARY KEY (id));

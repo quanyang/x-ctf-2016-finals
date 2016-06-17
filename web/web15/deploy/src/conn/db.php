@@ -4,7 +4,7 @@ class dbConn {
   public function __construct() {
     $dbhost = 'localhost';
     $dbuser = 'continental';
-    $dbpass = 'XCTFP@SSW0RDV3RYL0NGANDG00D';
+    $dbpass = 'XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG';
     $dbname = 'continental';
     $this->conn = new mysqli($dbhost, $dbuser, $dbpass, $dbname) or die("Wrong info given");
     if (mysqli_connect_errno()) {
@@ -28,7 +28,7 @@ class dbConn {
 
   public function getAllUsernameLike($username) {
     $return = array();
-    $sql = "SELECT username FROM users WHERE username like '%".$username."%';";
+    $sql = "SELECT username FROM users WHERE username like '%".str_replace(" ", "", $username)."%';";
     if ($this->conn->multi_query($sql)) {
       $result = $this->conn->store_result();
       while ($row = $result->fetch_array()) {
