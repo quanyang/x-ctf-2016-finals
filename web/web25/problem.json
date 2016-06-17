@@ -2,7 +2,7 @@
  "score": 25,
  "category": "Web",
  "grader": "web/web25/grader.py",
- "description": "Flag is on the server. Get a reverse shell. :)<br/>Be nice, don't break the server.",
+ "description": "Flag is on the server. Get a reverse shell. :)<br/>Be nice, don't break the server. http://bg3.spro.ink:8081",
  "threshold": 0,
  "weightmap": {},
  "hint": ""}

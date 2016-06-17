@@ -2,7 +2,7 @@
  "score": 15,
  "category": "Web",
  "grader": "web/web15/grader.py",
- "description": "Login as 'johnwick' and find the flag. ",
+ "description": "Login as 'johnwick' and find the flag. http://bg2.spro.ink:8080",
  "threshold": 0,
  "weightmap": {},
  "hint": ""}
