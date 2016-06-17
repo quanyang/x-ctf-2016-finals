@@ -2,7 +2,7 @@
  "score": 5,
  "category": "Pwn",
  "grader": "pwn/rmrf/grader.py",
- "description": "True story: some punk at CDDC got onto the same system during the training days as me, noticed I was logged on as well, and started trash talking me on /dev/pty1. Then, he proceeded to rm -rf /. Show him that does not stop you.<br /><br />nc bg2.spro.ink 4242",
+ "description": "True story: some punk at CDDC got onto the same system during the training days as me, noticed I was logged on as well, and started trash talking me on /dev/pty1. Then, he proceeded to rm -rf /. Show him that does not stop you.<br /><br />ssh -p4242 rmrf@bg2.spro.ink. Password: rmrf",
  "threshold": 0,
  "weightmap": {},
  "hint": ""}
