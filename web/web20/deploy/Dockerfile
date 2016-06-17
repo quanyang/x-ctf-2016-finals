@@ -17,7 +17,7 @@ RUN chmod 444 /flag_is_here.lol
 RUN chown www-data:www-data -R /var/www/html/hitimages
 RUN chmod +x start.sh
 RUN chmod +w /var/www/html/hitimages
-RUN crontab -l | { cat; echo "*/5 * * * * rm -rf /var/www/html/hitimages/*"; } | crontab -
+RUN crontab -l | { cat; echo "*/1 * * * * root rm -rf /var/www/html/hitimages/*"; } | crontab -
 
 ENTRYPOINT ["./start.sh"]
 
