@@ -1,0 +1,8 @@
+{"name": "Cat Tee",
+ "score": 12,
+ "category": "Pwn",
+ "grader": "pwn/cattee/grader.py",
+ "description": "ssh -p4243 cattee@bg4.spro.ink. Password: cattee",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}
