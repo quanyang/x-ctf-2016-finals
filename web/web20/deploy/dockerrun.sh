@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -p 8888:80 -t -i xctf-web20
+docker run -p 8001:80 -t -i xctf-web20

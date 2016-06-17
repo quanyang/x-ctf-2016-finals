@@ -4,8 +4,8 @@ service mysql start
 service apache2 start &
 mysql -uroot -pAdmin2015 -e """
 drop database exampleDB;
-SET PASSWORD = PASSWORD('XCTFP@SSW0RDV3RYL0NGANDG00D'); 
-CREATE USER 'continental'@'localhost' IDENTIFIED BY 'XCTFP@SSW0RDV3RYL0NGANDG00D';
+SET PASSWORD = PASSWORD('XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG'); 
+CREATE USER 'continental'@'localhost' IDENTIFIED BY 'XCTFP@SSW0RDV3RYL0NGANDG00DANDVERYLONG';
 GRANT ALL ON continental.* TO 'continental'@'localhost';
 CREATE DATABASE continental;
 USE continental;
