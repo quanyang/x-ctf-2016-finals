@@ -1,0 +1,8 @@
+{"name": "Badge Level Two",
+ "score": 10,
+ "category": "Badge",
+ "grader": "badge/leveltwo/grader.py",
+ "description": "Enter the password you got after beating level two. Flag does not follow the XCTF{} format.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}

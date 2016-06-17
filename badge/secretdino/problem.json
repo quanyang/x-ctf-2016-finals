@@ -1,0 +1,8 @@
+{"name": "Secret Dinosaur",
+ "score": 25,
+ "category": "Badge",
+ "grader": "badge/secretdino/grader.py",
+ "description": "Find the dinosaur flag!",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}

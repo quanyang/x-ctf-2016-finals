@@ -1,0 +1,8 @@
+{"name": "Secret Dinosaur Secret",
+ "score": 2,
+ "category": "Badge",
+ "grader": "badge/secretdinotweet/grader.py",
+ "description": "Follow the secret instructions.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": ""}
