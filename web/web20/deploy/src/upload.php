@@ -1,9 +1,12 @@
 <?php
 include_once('./conn/db.php');
 /*
- * flag is in /var/www/html/flag_is_here.lol 
+ * flag is in /flag_is_here.lol 
  */
-stream_wrapper_unregister("file", "ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg", "expect");
+$scheme = ["ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg","https","http","ftps","compress.zlib","compress.bzip2","zip"];
+foreach ($scheme as $i) {
+  stream_wrapper_unregister($i);
+}
 function getRedirectUrl ($url) {
   stream_context_set_default(array(
                              'http' => array(
