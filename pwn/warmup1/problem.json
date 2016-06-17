@@ -1,0 +1,8 @@
+{"name": "Warmup 1",
+ "score": 5,
+ "category": "Pwn",
+ "grader": "pwn/warmup1/grader.py",
+ "description": "Please exploit <a target=_blank href='/problem-static/pwn/warmup1/52dbda9d8e00678c44b10882ce49f1d1'>me</a>.<br /><br />nc bg1.spro.ink 4242",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Easy peasy, yes?"}

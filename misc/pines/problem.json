@@ -1,0 +1,8 @@
+{"name": "Pines",
+ "score": 15,
+ "category": "Misc",
+ "grader": "misc/pines/grader.py",
+ "description": "Connect to this AP: Amon's Badge. Password is amonsbadge. Flag does not follow the XCTF{} format.",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "This isn't a WiFi challenge!"}
