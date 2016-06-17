@@ -1,0 +1,8 @@
+{"name": "Speed RE",
+ "score": 15,
+ "category": "Reversing",
+ "grader": "re/speedre/grader.py",
+ "description": "Play a speed game!<br /><br />nc bg1.spro.ink 1337",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Embrace the Iris"}
