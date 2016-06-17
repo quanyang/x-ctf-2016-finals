@@ -14,6 +14,7 @@ ADD ./src /var/www/html
 COPY start.sh start.sh
 RUN mv /var/www/html/flag_is_here.lol /flag_is_here.lol
 RUN chmod 444 /flag_is_here.lol
+RUN mkdir /var/www/html/hitimages
 RUN chown www-data:www-data -R /var/www/html/hitimages
 RUN chmod +x start.sh
 RUN chmod +w /var/www/html/hitimages
