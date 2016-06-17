@@ -17,6 +17,7 @@ COPY start.sh start.sh
 RUN echo "extension=expect.so" >> /etc/php5/apache2/php.ini
 RUN mv /var/www/html/flag_is_really_here.xxe /flag_is_really_here.xxe
 RUN chmod 444 /flag_is_really_here.xxe
+RUN mkdir /var/www/html/hitimages
 RUN chown www-data:www-data -R /var/www/html/hitimages
 RUN chmod +x start.sh
 RUN chmod +w /var/www/html/hitimages
