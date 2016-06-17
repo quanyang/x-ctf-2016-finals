@@ -21,7 +21,6 @@ RUN chown www-data:www-data -R /var/www/html/hitimages
 RUN chmod +x start.sh
 RUN chmod +w /var/www/html/hitimages
 RUN service apache2 restart
-RUN crontab -l | { cat; echo "*/5 * * * * rm -rf /var/www/html/hitimages/*"; } | crontab -
 
 ENTRYPOINT ["./start.sh"]
 

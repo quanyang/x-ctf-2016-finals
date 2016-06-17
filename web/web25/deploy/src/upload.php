@@ -30,7 +30,7 @@ if (isset($_GET['upload']) && isset($_FILES['image'])) {
     }
   } else if ($ext === 'svg') {
     $svg = file_get_contents($_FILES["image"]["tmp_name"]);
-    $svg = new SimpleXMLElement( $svg );
+    $svg = new SimpleXMLElement($svg);
     $svg->registerXPathNamespace('svg', 'http://www.w3.org/2000/svg');
     $svg->registerXPathNamespace('xlink', 'http://www.w3.org/1999/xlink');
     $result = $svg->xpath('//svg:image/@xlink:href');
@@ -39,6 +39,8 @@ if (isset($_GET['upload']) && isset($_FILES['image'])) {
     for ($i = 0; $i < count($result); $i++){
       $msg .= file_get_contents($result[$i]['href']);
     }
+  } else {
+    $error = "Invalid FileType! Only .gif, .png, .jpg or .svg!"
   }
 
 }
@@ -124,6 +126,9 @@ if (isset($_GET['upload']) && isset($_FILES['image'])) {
                   <div class="row center-align">
                     <p class="center">
                       <?php
+                      if (isset($error)) {
+                        echo $error;
+                      }
                       if (isset($file)) {
                         echo "<img src=$file width='500px' height='500px'>";
                       }
