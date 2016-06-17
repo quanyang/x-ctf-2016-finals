@@ -6,6 +6,7 @@ RUN useradd -m formatstr
 COPY ./fmt /home/formatstr/fmt
 COPY ./password.txt /home/formatstr/password.txt
 COPY ./password.txt /password.txt
+RUN chown root:formatstr /password.txt
 RUN chmod 750 /password.txt
 COPY ./flag /home/formatstr/flag
 COPY ./fmtservice /etc/xinetd.d/fmtservice
