@@ -1,1 +1,1 @@
-docker build -t xctf-web20 .
+docker build -t xctf-web25 .
