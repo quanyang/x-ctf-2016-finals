@@ -101,7 +101,8 @@ def main():
             win = False
 
         proc = subprocess.Popen(loc, stdin=subprocess.PIPE,
-                                stdout=subprocess.PIPE)
+                                stdout=subprocess.PIPE,
+                                stderr=subprocess.PIPE)
         proc.stdin.write(userin)
         proc.stdin.flush()
         result = proc.stdout.read()
