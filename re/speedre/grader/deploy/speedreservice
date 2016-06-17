@@ -1,0 +1,13 @@
+service speedreservice
+{
+    disable = no
+    socket_type = stream
+    protocol    = tcp
+    wait        = no
+    user        = speedre
+    bind        = 0.0.0.0
+    server      = /home/speedre/speedre.py
+    type        = UNLISTED
+    port        = 31337
+}
+

@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker build -t boverflow .
+docker build -t warmup1 .

@@ -8,11 +8,11 @@ import subprocess
 import string
 import signal
 
-FLAG = file("flag").read()
+FLAG = file("/home/speedre/flag").read()
 
 NUMVARS = 3
 NUMEQS = 3
-TEMPLATE = file("template.c").read()
+TEMPLATE = file("/home/speedre/template.c").read()
 FN_TEMPLATE = """int x%d(char inp[]) {
     int coefs[] = {%s};
     int sum = 0;
