@@ -66,7 +66,8 @@ def comp(data):
     cf.write(data)
     cf.flush()
     cf.close()
-    subprocess.check_call(["gcc", "-o", tf[1][:-2], tf[1]])
+    subprocess.check_call(["gcc", "-o", tf[1][:-2], tf[1]],
+                          stderr=subprocess.PIPE)
     #os.remove(tf[1])
     return tf[1][:-2]
 
