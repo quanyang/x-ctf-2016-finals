@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -p 8002:80 -t -i xctf-web25
+docker run -p 8081:80 -t -d xctf-web25
