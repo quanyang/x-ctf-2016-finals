@@ -1,0 +1,8 @@
+{"name": "Zebra Lanyard",
+ "score": 10,
+ "category": "Crypto",
+ "grader": "crypto/zebra/grader.py",
+ "description": "x",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Look at your lanyard."}

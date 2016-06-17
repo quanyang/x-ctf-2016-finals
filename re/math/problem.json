@@ -1,0 +1,8 @@
+{"name": "Math",
+ "score": 20,
+ "category": "Reversing",
+ "grader": "re/math/grader.py",
+ "description": "Suprise <a target=_blank href='/problem-static/re/math/3b4070d0b562a17047e56cc6e366378b'>math test</a>!",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Can you do the math?"}
