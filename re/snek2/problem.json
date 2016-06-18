@@ -1,0 +1,8 @@
+{"name": "Snek 2",
+ "score": 5,
+ "category": "Reversing",
+ "grader": "re/snek2/grader.py",
+ "description": "Not as hard as snek 1! Try it <a target=_blank href='/problem-static/re/snek2/abf3bda386bea93f6fb962b7b67265c7.pyc'>out</a>!",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Too easy!"}
