@@ -28,7 +28,7 @@ class dbConn {
 
   public function getAllUsernameLike($username) {
     $return = array();
-    $sql = "SELECT username FROM users WHERE username like '%".str_replace(" ", "", $username)."%';";
+    $sql = "SELECT username FROM users WHERE username like '%".$username."%';";
     if ($this->conn->multi_query($sql)) {
       $result = $this->conn->store_result();
       while ($row = $result->fetch_array()) {
