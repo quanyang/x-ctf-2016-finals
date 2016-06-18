@@ -4,7 +4,7 @@ service pingservice
     socket_type = stream
     protocol    = tcp
     wait        = no
-    user        = formatstr
+    user        = ping
     bind        = 0.0.0.0
     server      = /home/ping/ping.py
     type        = UNLISTED

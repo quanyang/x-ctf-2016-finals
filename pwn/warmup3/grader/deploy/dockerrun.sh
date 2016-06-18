@@ -1,3 +1,3 @@
 #!/bin/sh
 
-docker run -dt -p 4243:31337 ping
+docker run -dt -p 4244:31337 ping

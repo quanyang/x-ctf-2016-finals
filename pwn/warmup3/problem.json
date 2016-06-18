@@ -1,8 +1,8 @@
-{"name": "Warmup 2",
- "score": 4,
+{"name": "Warmup 3",
+ "score": 2,
  "category": "Pwn",
- "grader": "pwn/warmup2/grader.py",
- "description": "Please defuse the bomb <a target=_blank href='/problem-static/pwn/warmup2/e2679e6bb2d5c00fedf6cfeb9d11a2f1'></a>.<br /><br />nc bg4.spro.ink 4242",
+ "grader": "pwn/warmup3/grader.py",
+ "description": "Ping me at 'nc bg3.spro.ink 4244'",
  "threshold": 0,
  "weightmap": {},
  "hint": "really a warm-up only ah?"}
