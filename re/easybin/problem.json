@@ -1,0 +1,8 @@
+{"name": "EasyBin",
+ "score": 3,
+ "category": "Reversing",
+ "grader": "re/easybin/grader.py",
+ "description": "Analyze <a target=_blank href='/problem-static/re/easybin/a14e45415774186942284101a8f06f07'>this</a> and get me the flag!",
+ "threshold": 0,
+ "weightmap": {},
+ "hint": "Too easy!"}
