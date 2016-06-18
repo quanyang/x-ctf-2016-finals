@@ -1,4 +1,7 @@
 <?php
+/*
+ * flag is in /flag_is_here.lol 
+ */
 if(!session_id()) {
   session_start();
   date_default_timezone_set('Asia/Singapore');

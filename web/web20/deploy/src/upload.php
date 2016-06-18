@@ -3,7 +3,7 @@ include_once('./conn/db.php');
 /*
  * flag is in /flag_is_here.lol 
  */
-$scheme = ["ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg","https","http","ftps","compress.zlib","compress.bzip2","zip"];
+$scheme = ["ftp", "zlib", "data", "glob", "phar", "ssh2", "rar", "ogg","ftps","compress.zlib","compress.bzip2","zip"];
 foreach ($scheme as $i) {
   stream_wrapper_unregister($i);
 }
