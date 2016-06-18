@@ -40,7 +40,7 @@ if (isset($_GET['upload']) && isset($_FILES['image'])) {
       $msg .= file_get_contents($result[$i]['href']);
     }
   } else {
-    $error = "Invalid FileType! Only .gif, .png, .jpg or .svg!"
+    $error = "Invalid FileType! Only .gif, .png, .jpg or .svg!";
   }
 
 }
