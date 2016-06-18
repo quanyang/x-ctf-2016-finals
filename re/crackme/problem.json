@@ -2,7 +2,7 @@
  "score": 20,
  "category": "Reversing",
  "grader": "re/crackme/grader.py",
- "description": "Crack this <a target=_blank href='/problem-static/re/crackme/5e8cf66595ab4e0f2bc268726489ee87'></a> up !",
+ "description": "Crack <a target=_blank href='/problem-static/re/crackme/5e8cf66595ab4e0f2bc268726489ee87'>this</a> up !",
  "threshold": 0,
  "weightmap": {},
  "hint": "Literally crack me. xD"}
