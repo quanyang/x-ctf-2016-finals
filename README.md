@@ -1,6 +1,8 @@
 # x-ctf-2016-finals
 Challenges for X-CTF 2016 by NUS Greyhats
 
+Note: This is not the Chinese X-CTF! This is a CTF held at the National University of Singapore for students.
+
 ## Author of challenges
 @Quanyang  
 @nnamon  
