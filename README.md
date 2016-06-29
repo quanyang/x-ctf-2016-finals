@@ -13,7 +13,7 @@ Note: This is not the Chinese X-CTF! This is a CTF held at the National Universi
 ## Write up for challenges
 ### Web
 ***Web 15 - JohnWick*** - [http://quanyang.github.io/x-ctf-finals-2016-john-wick-web-15/](http://quanyang.github.io/x-ctf-finals-2016-john-wick-web-15/)  
-***Web 20 - JohnSick*** - [http://quanyang.github.io/x-ctf-finals-2016-john-sick-web-20/](http://quanyang.github.io/x-ctf-finals-2016-john-sick-web-20/)
+***Web 20 - JohnSick*** - [http://quanyang.github.io/x-ctf-finals-2016-john-sick-web-20/](http://quanyang.github.io/x-ctf-finals-2016-john-sick-web-20/)  
 ***Web 25 - JohnSlick*** - [http://quanyang.github.io/x-ctf-finals-2016-john-slick-web-25/](http://quanyang.github.io/x-ctf-finals-2016-john-slick-web-25/)
 
 ### Reversing
